@@ -1,0 +1,131 @@
+.advantage-slides {
+    position: relative;
+
+    &__container {
+        clip-path: inset(-12px);
+    }
+
+    &__item {
+        height: auto;
+        min-height: 632px;
+        background: #FFFFFF;
+        box-shadow: 0 1px 12px rgba(130, 159, 240, 0.4);
+        border-radius: 0 40px 40px 40px;
+
+        padding: 54px 74px;
+    }
+
+    &__img {
+        width: 162px;
+        height: 162px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(73.46deg, #95B1D8 6.94%, #A7A7D6 45.7%, #B79DC9 93.48%);
+        border-radius: 100%;
+
+        margin-bottom: 90px;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 130%;
+
+        margin-bottom: 30px;
+    }
+
+    &__txt {
+        font-size: 25px;
+        line-height: 130%;
+    }
+
+    @media (max-width: 1800px) {
+
+        &__item {
+            min-height: 440px;
+
+            padding: 40px 50px;
+        }
+
+        &__img {
+            width: 100px;
+            height: 100px;
+
+            margin-bottom: 50px;
+
+            & img {
+                width: 50px;
+                height: auto;
+            }
+        }
+
+        &__title {
+            font-size: 26px;
+
+            margin-bottom: 20px;
+        }
+
+        &__txt {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+
+        &__item {
+            min-height: 360px;
+
+            padding: 40px 50px;
+        }
+
+        &__img {
+            width: 80px;
+            height: 80px;
+
+            margin-bottom: 36px;
+
+            & img {
+                width: 36px;
+            }
+        }
+
+        &__title {
+            font-size: 22px;
+
+            margin-bottom: 7px;
+        }
+
+        &__txt {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        &__item {
+            min-height: 280px;
+
+            padding: 28px 34px;
+        }
+
+        &__img {
+            width: 60px;
+            height: 60px;
+
+            margin-bottom: 24px;
+
+            & img {
+                width: 28px;
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__txt {
+            font-size: 14px;
+        }
+    }
+}

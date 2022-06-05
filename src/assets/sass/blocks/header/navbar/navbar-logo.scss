@@ -1,0 +1,44 @@
+.navbar-logo {
+    width: 157px;
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & img {
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 50px 0;
+    }
+
+    @media (max-width: 1800px) {
+        width: 120px;
+    }
+
+    @media (max-width: 1200px) {
+        width: 100px;
+    }
+
+    @media (max-width: 991px) {
+        width: 85px;
+
+        & img {
+            border-radius: 0 0 36px 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        width: 106px;
+        height: 60px;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        & img {
+            height: 100%;
+            border-radius: 0 0 10px 10px;
+            object-fit: cover;
+        }
+    }
+}

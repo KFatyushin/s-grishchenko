@@ -1,0 +1,8 @@
+.advantage-pagination {
+    position: relative;
+    margin-top: 45px;
+
+    @media (max-width: 1200px) {
+        margin-top: 30px;
+    }
+}

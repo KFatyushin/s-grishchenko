@@ -1,0 +1,23 @@
+.swiper-pagination {
+
+    &-bullet {
+        width: 20px;
+        height: 20px;
+        background: #829FF0;
+        opacity: .4;
+
+        margin: 0 4px;
+
+        &-active {
+            opacity: 1;
+        }
+    }
+
+    @media (max-width: 1800px) {
+
+        &-bullet {
+            width: 12px;
+            height: 12px;
+        }
+    }
+}

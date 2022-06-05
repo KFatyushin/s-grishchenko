@@ -1,0 +1,287 @@
+.contact {
+    padding: 180px 0 60px;
+    position: relative;
+
+    /*&:before {
+        content: '';
+
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: url("../img/contacts-bg.png") no-repeat center center / cover;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }*/
+
+    &__bg {
+        width: 100%;
+        max-width: 1920px;
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        z-index: -1;
+        transform: translateX(50%);
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    &__wrap {
+        max-width: 480px;
+
+        margin: 0 62px 0 auto;
+    }
+
+    &__block {
+        background: #fff;
+        box-shadow: 0 4px 40px rgba(130,159,240,.4);
+        border-radius: 0 0 0 39px;
+
+        padding: 72px 40px 56px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 29px;
+
+        margin-bottom: 45px;
+    }
+
+    &__address {
+        font-size: 18px;
+        line-height: 17px;
+
+        margin-bottom: 35px;
+    }
+
+    &__email {
+        margin-bottom: 37px;
+
+        & a {
+            font-size: 18px;
+            line-height: 17px;
+            text-decoration-line: underline;
+            color: #3A3A3A;
+        }
+    }
+
+    &__tel {
+        margin-bottom: 21px;
+
+        & a {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 29px;
+            color: #3A3A3A;
+        }
+    }
+
+    &__schedule {
+        font-size: 18px;
+        line-height: 17px;
+
+        margin-bottom: 37px;
+    }
+
+    &__order {
+        display: inline-block;
+        border-bottom: 1px dashed #7C98EC;
+
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 150%;
+        color: #7C98EC;
+
+        margin-bottom: 32px;
+
+        cursor: pointer;
+    }
+
+    &__offer {
+        font-size: 18px;
+        line-height: 150%;
+
+        margin-top: 40px;
+    }
+
+    @media (max-width: 1800px) {
+
+        &__wrap {
+            max-width: 400px;
+        }
+
+        &__block {
+            padding: 40px;
+        }
+
+        &__title {
+            font-size: 26px;
+            line-height: 120%;
+
+            margin-bottom: 16px;
+        }
+
+        &__address {
+            font-size: 14px;
+            line-height: 120%;
+
+            margin-bottom: 4px;
+        }
+
+        &__email {
+            margin-bottom: 32px;
+
+            & a {
+                font-size: 14px;
+                line-height: 120%;
+            }
+        }
+
+        &__tel {
+            margin-bottom: 4px;
+
+            & a {
+                font-size: 21px;
+                line-height: 120%;
+            }
+        }
+
+        &__schedule {
+            font-size: 13px;
+            line-height: 120%;
+
+            margin-bottom: 12px;
+        }
+
+        &__order {
+            font-size: 18px;
+        }
+
+        &__offer {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding: 120px 0 40px;
+
+        &__bg {
+            width: 1400px;
+            right: 58%;
+        }
+
+        &__wrap {
+            margin: 0 0 0 auto;
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 60px 0 40px;
+
+        &__bg {
+            width: 1200px;
+
+            @media (max-width: 900px) {
+                width: 1100px;
+
+                right: 61vw;
+            }
+        }
+
+        &__wrap {
+            max-width: 370px;
+
+            &__block {
+                padding: 30px 26px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 360px;
+
+        &__bg {
+            bottom: initial;
+            top: -250px;
+            right: initial;
+            left: 50%;
+            transform: translateX(-40%);
+
+            &:before {
+                content: '';
+
+                width: 100%;
+                height: 100%;
+                box-shadow: inset 0 -14px 10px 10px #f5f9fa;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 100;
+            }
+        }
+
+        &__wrap {
+            margin-right: auto;
+        }
+    }
+
+    @media (max-width: 575px) {
+
+        &__wrap {
+            //max-width: 400px;
+        }
+
+        &__block {
+            padding: 30px;
+        }
+
+        &__title {
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        &__address {
+            font-size: 12px;
+
+            margin-bottom: 0;
+        }
+
+        &__email {
+            margin-bottom: 24px;
+
+            & a {
+                font-size: 12px;
+            }
+        }
+
+        &__tel {
+            margin-bottom: 2px;
+
+            & a {
+                font-size: 20px;
+            }
+        }
+
+        &__schedule {
+            font-size: 12px;
+
+            margin-bottom: 8px;
+        }
+
+        &__order {
+            font-size: 16px;
+        }
+
+        &__offer {
+            font-size: 12px;
+
+            margin-top: 30px;
+        }
+    }
+}

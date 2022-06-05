@@ -1,0 +1,12 @@
+.services-tabs {
+
+    &__wrap {
+        position: relative;
+    }
+
+    @media (max-width: 767px) {
+        &__wrap {
+            clip-path: inset(-100px -11px);
+        }
+    }
+}

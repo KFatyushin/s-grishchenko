@@ -1,0 +1,18 @@
+.popular {
+    padding: 80px 0;
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 40px 0;
+    }
+
+    @media (max-width: 1200px) {
+
+        &__title {
+            margin-bottom: 21px;
+        }
+    }
+}

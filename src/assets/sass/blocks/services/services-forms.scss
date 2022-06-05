@@ -1,0 +1,254 @@
+.services-forms {
+    display: flex;
+
+    &__item {
+        width: 50%;
+        background: #fff;
+        box-shadow: 0 2.98678px 29.8678px rgba(130, 159, 240, 0.4);
+        border-radius: 0 30px 30px 30px;
+
+        padding: 40px;
+        margin-right: 26px;
+
+        &:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        line-height: 29px;
+        color: #797979;
+
+        margin-bottom: 20px;
+    }
+
+    &__tel {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 29px;
+
+        margin-bottom: 40px;
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 520px;
+        display: block;
+        background: #F0F4F7;
+        border-radius: 0 28px 28px 28px;
+
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 15px;
+
+        padding: 21px 34px;
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__btns {
+        display: flex;
+    }
+
+    &__btn {
+        width: 100%;
+        max-width: 250px;
+        background: linear-gradient(180deg, #AEC2F7 0%, #7C98EC 100%);
+        box-shadow: 0 3px 30px rgba(130, 159, 240, 0.4);
+        border-radius: 100px;
+
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 14px;
+        color: #fff;
+
+        padding: 24px 28px;
+    }
+
+    &__pay {
+        display: block;
+
+        color: #7C98EC;
+
+        margin-left: 15px;
+        position: relative;
+        z-index: 1;
+
+        &:before,&:after {
+            content: '';
+
+            border-radius: 100px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:before {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(73.46deg, #95B1D8 6.94%, #A7A7D6 45.7%, #B79DC9 93.48%);
+
+            z-index: -1;
+        }
+        &:after {
+            content: '';
+
+            background: #fff;
+            top: 3px;
+            right: 3px;
+            bottom: 3px;
+            left: 3px;
+            z-index: -1;
+        }
+    }
+
+    &__hint {
+        font-size: 16px;
+        line-height: 15px;
+        color: #797979;
+
+        margin-top: 41px;
+    }
+
+    & .wpcf7-not-valid-tip {
+        transform: translateY(-12px);
+    }
+
+    @media (max-width: 1800px) {
+
+        &__item {
+            padding: 30px 40px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 120%;
+
+            margin-bottom: 16px;
+        }
+
+        &__tel {
+            font-size: 21px;
+        }
+
+        &__input {
+            font-size: 15px;
+
+            padding: 18px 28px;
+        }
+
+        &__btn {
+            padding: 20px 28px;
+        }
+
+        &__hint {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        &__title {
+            font-size: 20px;
+
+            margin-bottom: 8px;
+        }
+
+        &__tel {
+            font-size: 18px;
+
+            margin-bottom: 28px;
+        }
+
+        &__input {
+            border-radius: 0 28px 28px 21px;
+
+            font-size: 14px;
+
+            padding: 18px 24px;
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 24px;
+            }
+        }
+
+        &__btns {
+            display: block;
+        }
+
+        &__btn {
+            width: auto;
+            max-width: initial;
+
+            font-size: 14px;
+
+            padding: 14px 24px;
+        }
+
+        &__pay {
+            margin: 16px 0 0;
+        }
+    }
+
+    @media (max-width: 991px) {
+        &__item {
+            padding: 20px 20px 30px;
+        }
+
+        &__title {
+            font-size: 16px;
+
+            margin-bottom: 6px;
+        }
+
+        &__tel {
+            font-size: 16px;
+
+            margin-bottom: 20px;
+        }
+
+        &__input {
+            width: 100%;
+            border-radius: 0 15px 15px;
+
+            font-size: 12px;
+
+            padding: 10px 20px;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 18px;
+            }
+        }
+
+        &__btn {
+            width: 100%;
+
+            font-size: 12px;
+            text-transform: uppercase;
+
+            padding: 12px 20px;
+        }
+
+        &__hint {
+            font-size: 12px;
+
+            margin-top: 21px;
+        }
+    }
+
+    @media (max-width: 620px) {
+        flex-wrap: wrap;
+
+        &__item {
+            width: 100%;
+
+            margin: 0 0 20px;
+        }
+    }
+}

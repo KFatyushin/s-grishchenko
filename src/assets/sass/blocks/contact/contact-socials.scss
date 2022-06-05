@@ -1,0 +1,44 @@
+.contact-socials {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 44px;
+
+    &__item {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(73.46deg, #95B1D8 6.94%, #A7A7D6 45.7%, #B79DC9 93.48%);
+        border-radius: 50%;
+    }
+
+    @media (max-width: 1800px) {
+
+        &__item {
+            width: 44px;
+            height: 44px;
+
+            & img {
+                width: 20px;
+                height: 24px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 30px;
+
+        &__item {
+            width: 37px;
+            height: 37px;
+
+            & img {
+                width: 18px;
+                height: 20px;
+            }
+        }
+    }
+}

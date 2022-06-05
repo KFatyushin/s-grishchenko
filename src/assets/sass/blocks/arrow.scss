@@ -1,0 +1,59 @@
+.arrow {
+    width: 20px;
+
+    position: relative;
+
+    transition: transform .5s cubic-bezier(.45,-1,.45,1.5);
+
+    &:before,
+    &:after {
+        content: '';
+
+        width: 12px;
+        height: 2px;
+        background: #fff;
+
+        position: absolute;
+    }
+    &:before {
+        left: 0;
+        transform: rotate(50deg);
+    }
+    &:after {
+        right: 0;
+        transform: rotate(-50deg);
+    }
+
+    @media (max-width: 1800px) {
+
+        &:before,
+        &:after {
+            width: 10px;
+            height: 2px;
+        }
+
+        &:before {
+            left: 2px;
+        }
+        &:after {
+            right: 2px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        width: 16px;
+
+        &:before,
+        &:after {
+            width: 8px;
+            height: 2px;
+        }
+
+        &:before {
+            left: 2px;
+        }
+        &:after {
+            right: 2px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.services {
+    padding: 40px 0;
+
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 1800px) {
+        padding: 80px 0 40px;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 40px 0;
+
+        &__title {
+            margin-bottom: 44px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+}

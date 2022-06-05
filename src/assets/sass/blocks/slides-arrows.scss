@@ -1,0 +1,50 @@
+.slides-arrows {
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 50%;
+    right: -29px;
+    left: -29px;
+    transform: translateY(-90%);
+    z-index: 100;
+
+    &__item {
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #D6DCED;
+        border-radius: 50%;
+
+        cursor: pointer;
+    }
+
+    &__prev {
+        transform: rotate(90deg);
+    }
+    &__next {
+        transform: rotate(-90deg);
+    }
+
+    @media (max-width: 1800px) {
+        right: -20px;
+        left: -20px;
+
+        &__item {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        right: -15px;
+        left: -15px;
+
+        &__item {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

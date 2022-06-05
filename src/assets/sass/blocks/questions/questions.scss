@@ -1,0 +1,27 @@
+.questions {
+    padding: 80px 0;
+
+    &__title {
+        margin-bottom: 85px;
+    }
+
+    @media (max-width: 1800px) {
+        &__title {
+            margin-bottom: 56px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding: 40px 0;
+
+        &__title {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        &__title {
+            margin-bottom: 21px;
+        }
+    }
+}

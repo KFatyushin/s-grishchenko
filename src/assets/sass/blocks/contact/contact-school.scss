@@ -1,0 +1,51 @@
+.contact-school {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width: 84px;
+
+        margin-right: 22px;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__txt {
+        max-width: 300px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 130%;
+        text-decoration-line: underline;
+        color: #7C98EC;
+    }
+
+    @media (max-width: 1800px) {
+
+        &__img {
+            width: 65px;
+        }
+
+        &__txt {
+            max-width: 230px;
+
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 575px) {
+
+        &__img {
+            width: 55px;
+            flex-shrink: 0;
+        }
+
+        &__txt {
+            max-width: 200px;
+
+            font-size: 12px;
+        }
+    }
+}

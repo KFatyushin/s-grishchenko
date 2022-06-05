@@ -1,0 +1,14 @@
+.services-popup-slides {
+    display: flex;
+
+    margin-bottom: 40px;
+    position: relative;
+
+    @media (max-width: 991px) {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 575px) {
+        flex-direction: column;
+    }
+}

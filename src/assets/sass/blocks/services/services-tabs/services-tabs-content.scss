@@ -1,0 +1,180 @@
+.services-tabs-content {
+    height: 0;
+    overflow: hidden;
+
+    &.active {
+        height: initial;
+        overflow: initial;
+    }
+
+    &__item {
+        width: 50%;
+
+        cursor: pointer;
+
+        &_small {
+            width: 25%;
+        }
+
+        &:hover .services-tabs-content__img:before {
+            opacity: 1;
+        }
+        &:hover .services-tabs-content__img img {
+            filter: brightness(90%);
+        }
+    }
+
+    @media (min-width: 767px) {
+
+        &.active {
+            margin: -15px -10px;
+        }
+
+        & .swiper-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            padding: 15px 10px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        &.active {
+            margin: -20px -10px;
+        }
+
+        &__item {
+            padding: 20px 10px;
+        }
+    }
+
+    &__img {
+        background: #fff;
+        box-shadow: 0 4px 40px rgba(130, 159, 240, 0.4);
+        border-radius: 15px;
+
+        padding: 9px;
+        margin-bottom: 20px;
+        position: relative;
+
+        & img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            vertical-align: middle;
+            border-radius: 15px;
+
+            transition: filter .5s;
+        }
+
+        &:before {
+            content: '';
+
+            width: 200px;
+            height: 200px;
+            background: url("../img/watch-icon.png") no-repeat center / cover;
+            opacity: 0;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+
+            transition: opacity .5s;
+        }
+    }
+
+    &__title {
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 22px;
+    }
+
+    @media (max-width: 1800px) {
+
+        &__title {
+            font-size: 20px;
+            line-height: 130%;
+        }
+    }
+
+    @media (max-width: 1200px) {
+
+        &__img {
+            margin-bottom: 15px;
+
+            & img {
+                height: 240px;
+            }
+        }
+
+        &__title {
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        &__title {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+
+        margin: 0 -12px;
+
+        &__item {
+            width: 100%;
+            border-right: 12px solid transparent;
+            border-left: 12px solid transparent;
+
+            &_small {
+                width: 50%;
+            }
+        }
+
+        &__img {
+            box-shadow: 0 4px 10px rgba(130, 159, 240, 0.4);
+
+            & img {
+                height: 320px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        //clip-path: inset(-100px 0px);
+
+        margin: 0 -7px;
+
+        &__item {
+            border-right: 7px solid transparent;
+            border-left: 7px solid transparent;
+        }
+
+        &__img img {
+            height: 240px;
+        }
+
+        &__title {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        &__img img {
+            height: 180px;
+        }
+
+        &__title {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,244 @@
+.services-popup {
+    display: flex;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //z-index: 10000;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: -100;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .5s;
+
+    &.active {
+        visibility: initial;
+        opacity: 1;
+
+        z-index: 10000;
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(78,40,96,.5);
+        backdrop-filter: blur(5px);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        overflow-y: auto;
+    }
+
+    &__block {
+        max-width: 1200px;
+        background: #fff;
+        border-radius: 20px;
+
+        margin: auto;
+        padding: 50px 30px 45px;
+        position: relative;
+    }
+
+    &__img {
+        display: block;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 12px rgba(130,159,240,.4);
+
+        padding: 5px;
+        margin-bottom: 40px;
+
+        & img {
+            width: 100%;
+            border-radius: 6px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+
+        margin-bottom: 16px;
+    }
+
+    &__made {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    &__hint {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    &__form {
+
+        & form p {
+            display: flex;
+        }
+
+        & form span {
+            width: 50%;
+
+            margin-right: 20px;
+        }
+        & .services-forms__input {
+            font-size: 16px;
+
+            margin-bottom: 0;
+        }
+
+        & .services-forms__btn {
+            width: 50%;
+            max-width: initial;
+            align-self: flex-start;
+
+            font-size: 16px;
+        }
+    }
+
+    &__close {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px rgba(147,152,167,.3);
+
+        position: absolute;
+        top: -18px;
+        right: 30px;
+
+        cursor: pointer;
+
+        & div {
+            width: 19px;
+            height: 2px;
+            background: #7896ed;
+            border-radius: 30px;
+
+            position: absolute;
+
+            &:first-child {
+                transform: rotate(45deg);
+            }
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+
+        &__title {
+            font-size: 22px;
+        }
+
+        &__made {
+            font-size: 15px;
+        }
+
+        &__hint {
+            font-size: 15px;
+        }
+
+        &__form {
+            & .services-forms__input {
+                font-size: 14px;
+            }
+
+            & .services-forms__btn {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 30px 20px;
+
+        &__block {
+            padding: 40px 20px 30px;
+        }
+
+        &__title {
+            font-size: 20px;
+
+        margin-bottom: 12px;
+        }
+
+        &__made {
+            font-size: 14px;
+
+            margin-bottom: 32px;
+        }
+
+        &__hint {
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+        &__form {
+            & .services-forms__input {
+                font-size: 12px;
+            }
+
+            & .services-forms__btn {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding: 30px 20px;
+
+        &__block {
+            padding: 40px 20px 30px;
+        }
+
+        &__title {
+            font-size: 18px;
+
+            margin-bottom: 8px;
+        }
+
+        &__made {
+            font-size: 13px;
+
+            margin-bottom: 28px;
+        }
+
+        &__hint {
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+        &__form {
+
+            & form p {
+                flex-direction: column;
+            }
+
+            & form span {
+                width: 100%;
+
+                margin-bottom: 12px;
+                margin-right: 0;
+            }
+
+            & .services-forms__btn {
+                width: 100%;
+            }
+        }
+    }
+}

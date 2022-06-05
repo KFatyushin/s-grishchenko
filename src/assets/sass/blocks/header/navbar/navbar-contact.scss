@@ -1,0 +1,153 @@
+.navbar-contact {
+    text-align: right;
+
+    position: absolute;
+    top: 46px;
+    right: 50px;
+
+    &__tel {
+        margin-bottom: 10px;
+
+        & a {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 21px;
+            color: #3A3A3A;
+        }
+    }
+
+    &__schedule {
+        font-size: 12px;
+        line-height: 11px;
+
+        margin-bottom: 15px;
+    }
+
+    &__order span {
+        border-bottom: 1px dashed #7C98EC;
+
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 150%;
+        color: #7C98EC;
+
+        cursor: pointer;
+    }
+
+    &-phone {
+        display: none;
+    }
+
+    @media (max-width: 1800px) {
+        top: 32px;
+        right: 36px;
+
+        &__tel {
+            margin-bottom: 7px;
+
+            & a {
+                font-size: 18px;
+                line-height: 110%;
+            }
+        }
+
+        &__schedule {
+            font-size: 12px;
+            line-height: 110%;
+
+            margin-bottom: 10px;
+        }
+
+        &__order span {
+            font-size: 16px;
+            line-height: 110%;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        right: 20px;
+    }
+
+    @media (max-width: 1200px) {
+        top: 24px;
+
+        &__tel {
+            margin-bottom: 4px;
+
+            & a {
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+
+        &__schedule {
+            font-size: 10px;
+            color: #fff;
+
+            margin-bottom: 8px;
+        }
+
+        &__order span {
+            border-bottom-color: #fff;
+
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+
+    @media (max-width: 991px) {
+        display: none;
+
+        &-phone {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        display: block;
+
+        text-align: left;
+
+        position: initial;
+        padding: 30px 0 0 30px;
+
+        &__tel {
+            margin-bottom: 8px;
+
+            & a {
+                font-size: 22px;
+                color: #3A3A3A;
+            }
+        }
+
+        &__schedule {
+            font-size: 12px;
+            color: #3A3A3A;
+
+            margin-bottom: 15px;
+        }
+
+        &__order span {
+            border-bottom-color: #7C98EC;
+
+            font-size: 18px;
+            color: #7C98EC;
+        }
+
+        &-phone {
+            position: initial;
+
+            margin-left: auto;
+        }
+    }
+}

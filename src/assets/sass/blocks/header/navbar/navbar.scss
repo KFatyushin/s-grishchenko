@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 40px 0 130px;
+
+    @media (max-width: 1800px) {
+        max-width: 1520px;
+
+        padding: 26px 160px 100px;
+    }
+
+    @media (max-width: 1200px) {
+        padding: 20px 0 80px 110px;
+    }
+
+    @media (max-width: 991px) {
+        padding: 16px 0 60px 110px;
+    }
+
+    @media (max-width: 767px) {
+        align-items: center;
+
+        padding: 10px 30px 40px;
+    }
+
+    @media (max-width: 575px) {
+        align-items: center;
+
+        padding: 10px 20px 40px;
+    }
+}

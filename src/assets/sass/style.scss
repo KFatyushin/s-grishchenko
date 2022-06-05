@@ -1,0 +1,238 @@
+@import "vars";
+
+
+/* Fonts */
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.ttf") format("ttf"), url("../fonts/#{$file_name}.eot") format("eot");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+@import "fonts";
+
+
+/* Default styles */
+/* Default styles */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F5F9FA;
+
+    font-family: 'Gotham-Pro', sans-serif;
+    line-height: 130%;
+    color: #3A3A3A;
+
+    margin: 0;
+}
+
+menu, ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+p {
+    line-height: 130%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, textarea {
+    border: none;
+
+    font-family: 'Gotham-Pro', sans-serif;
+
+    padding: 0;
+}
+button, input[type='submit'] {
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.site-page {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1460px;
+
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media (max-width: 1800px) {
+        max-width: 1260px;
+    }
+
+    @media (max-width: 575px) {
+        padding: 0 20px;
+    }
+}
+
+.section-title {
+    font-size: 55px;
+    line-height: 53px;
+
+    @media (max-width: 1800px) {
+        font-size: 36px;
+        line-height: 130%;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 32px;
+    }
+
+    @media (max-width: 991px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 28px;
+        line-height: 120%;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 24px;
+    }
+}
+
+
+/* Blocks */
+// arrow
+@import "blocks/arrow";
+
+// swiper
+@import "vendor/swiper";
+@import "blocks/swiper-pagination";
+@import "blocks/slides-arrows";
+
+// Hamburger
+@import "blocks/hamburger";
+
+// Header
+@import "blocks/header/header";
+@import "blocks/header/header-intro";
+@import "blocks/header/header-hint";
+// Header --> Navbar
+@import "blocks/header/navbar/navbar";
+@import "blocks/header/navbar/navbar-logo";
+@import "blocks/header/navbar/navbar-menu";
+@import "blocks/header/navbar/navbar-contact";
+@import "blocks/header/navbar/navbar-mb-menu";
+
+// Services
+@import "blocks/services/services";
+@import "blocks/services/services-forms";
+// Services --> Tabs
+@import "blocks/services/services-tabs/services-tabs";
+@import "blocks/services/services-tabs/services-tabs-btns";
+@import "blocks/services/services-tabs/services-tabs-content";
+@import "blocks/services/services-tabs/services-arrows";
+// Services --> Popup
+@import "blocks/services/services-popup/services-popup";
+@import "blocks/services/services-popup/services-popup-slides";
+@import "blocks/services/services-popup/services-popup-slides-container";
+@import "blocks/services/services-popup/services-popup-slides-tabs";
+@import "blocks/services/services-popup/services-popup-arrows";
+
+// Adv
+@import "blocks/adv/adv";
+@import "blocks/adv/adv-slides";
+@import "blocks/adv/adv-pagination";
+
+// About
+@import "blocks/about/about";
+@import "blocks/about/about-inst";
+@import "blocks/about/about-list";
+
+// Statistics
+@import "blocks/statistics/statistics";
+@import "blocks/statistics/statistics-content";
+@import "blocks/statistics/statistics-list";
+
+// Popular
+@import "blocks/popular/popular";
+@import "blocks/popular/popular-table";
+
+// Questions
+@import "blocks/questions/questions";
+@import "blocks/questions/questions-list";
+
+// Contact
+@import "blocks/contact/contact";
+@import "blocks/contact/contact-socials";
+@import "blocks/contact/contact-school";
+
+// About
+@import "blocks/popup/popup";
+
+
+
+.no-active {
+    display: none!important;
+    transform: none!important;
+}
+
+.services-popup-img-small {
+    max-width: 800px;
+
+    & .services-popup-slides-container {
+        max-width: 540px;
+    }
+
+    & .services-popup-slides-tabs {
+        max-width: 171px;
+    }
+}
+.services-popup-img-small-noSlides {
+    max-width: 700px;
+}
+.services-popup-img-big-noSlides {
+    max-width: 1000px;
+}
+
+// cf7
+.wpcf7-not-valid-tip {
+    width: 100%!important;
+    white-space: nowrap;
+
+    margin-bottom: 0!important;
+}
+@media (max-width: 767px) {
+    .wpcf7-not-valid-tip,
+    .wpcf7-response-output {
+        font-size: 15px;
+    }
+}
+@media (max-width: 575px) {
+    .wpcf7-not-valid-tip,
+    .wpcf7-response-output {
+        font-size: 13px;
+    }
+}
